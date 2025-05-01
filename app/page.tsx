@@ -1,9 +1,16 @@
+
 "use client"
 
-import Link from "next/link"
+import { useEffect } from "react"
+import { useRouter } from "next/navigation"
 
 export default function Home() {
-  window.location.href = "/vod"
+  const router = useRouter()
+  
+  useEffect(() => {
+    router.push("/vod")
+  }, [router])
+  
   return (
     <main className="container">
       <h1>Vod project</h1>
